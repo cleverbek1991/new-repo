@@ -1,0 +1,12 @@
+<form [formGroup]="nestedForm" (ngSubmit)="onSubmit()">
+  <custom-input formControlName="cinput"></custom-input>
+  <currency-input formControlName="currencyInput"></currency-input>
+  <p-input formControlName="pInput"></p-input>
+  <radio-input formControlName="radio" value="one">one</radio-input>
+  <radio-input formControlName="radio" value="two">two</radio-input>
+  <radio-input formControlName="radio" value="three">three</radio-input>
+  <sum-input formControlName="sumInput"></sum-input>
+</form>
+
+<p>{{ nestedForm.value | json }}</p>
+<p>{{ nestedForm.valid | json }}</p>
